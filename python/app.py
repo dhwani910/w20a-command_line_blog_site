@@ -35,14 +35,19 @@ def Select_blog():
     cursor.close()
     conn.close()
 
+while True:
+    print("welcome to Dhwani's first blog site!")
+    username = input("username: ")
+    option = input("1. your new post: , 2. see others post: , 3. Exit ")
 
-print("welcome to Dhwani's first blog site!")
-username = input("username: ")
-option = input("1. your new post: , 2. see others post ")
+    if option == "1":
+       Insert_blog()
+    elif option == "2":
+       Select_blog()
+    elif option == "3":
+        print("Good Bye!!")
+        break   
+    else:
+       print("something went wrong") 
 
-if option == "1":
-    Insert_blog()
-elif option == "2":
-    Select_blog()
-else:
-    print("something went wrong")        
+       
