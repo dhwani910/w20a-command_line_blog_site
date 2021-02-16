@@ -47,7 +47,11 @@ def Select_blog():
          cursor = conn.cursor()
          cursor.execute("SELECT * FROM blog_post")
          rows = cursor.fetchall()
-         print(rows)
+         row_count = cursor.rowcount
+         print("returned " + str(row_count) + " row")
+         for row in rows:
+             print(row)
+        #  print(rows)
                                   
     except Exception as ex:
         print(ex)
